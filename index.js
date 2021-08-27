@@ -50,12 +50,17 @@ And here. | Okay. | I think we get it.
   }
 
   render() {
+    const containerStyle = {
+      height: "90vh",
+      width: "90%",
+      margin: "2% auto"
+    }
     const editorStyle = {
       backgroundColor: "#eee",
-      width: "400px",
+      border: "0",
       height: "80vh",
-      margin: "0 auto",
-      padding: "10px"
+      padding: "15px",
+      width: "100%"
     };
     const previewStyle = Object.assign(
       {},
@@ -63,10 +68,12 @@ And here. | Okay. | I think we get it.
       { textAlign: "left" });
 
     return (
-      <div>
-        <h1 className="text-center">Markdown Previewer</h1>
-        <div className="row">
-          <div className="col text-center">
+      <div style={containerStyle}>
+        <div className="row text-center">
+          <h1>Markdown Previewer</h1>
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-4 text-center">
             {/*---------- Editor -----------*/}
             <h4><badge>Editor</badge></h4>
             <div className="mark-input">
@@ -79,7 +86,7 @@ And here. | Okay. | I think we get it.
                 }}></textarea>
             </div>
           </div>
-          <div className="col text-center">
+          <div className="col-4 text-center">
             {/*---------- Preview -----------*/}
             <h4><badge>Preview</badge></h4>
             <div id="preview"
