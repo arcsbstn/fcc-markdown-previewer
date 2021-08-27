@@ -86,7 +86,7 @@ And here. | Okay. | I think we get it.
               className="overflow-auto"
               style={previewStyle}
               dangerouslySetInnerHTML={{
-                __html: marked(this.state.markdown)
+                __html: marked(this.state.markdown, { breaks: true, gfm: true })
               }}></div>
           </div>
         </div>
