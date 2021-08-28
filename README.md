@@ -1,6 +1,6 @@
 # Markdown Previewer
 
-View the project here](https://epic-ramanujan-65ff54.netlify.app/).
+View the project [here](https://epic-ramanujan-65ff54.netlify.app/).
 
 My solution for the [Markdown Previewer](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer) project under [freeCodeCamp's Front End Development Libraries course](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/). 
 
