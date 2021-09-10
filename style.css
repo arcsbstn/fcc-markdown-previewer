@@ -13,11 +13,6 @@
   padding: 50px 0;
 }
 
-.col {
-  background-color: indianred;
-  border: 1px solid white;
-}
-
 #editor,
 #preview {
   z-index: 3;
