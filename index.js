@@ -6,6 +6,9 @@ class App extends React.Component {
 ## This is a sub-heading...
 ### And here's some other cool stuff:
 
+This cat says hello!
+![hello cat](https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/bc/ba/16/bcba16f8-49ce-c6b9-6226-d7d85a8556ea/source/60x60bb.jpg)
+
 Heres some code, \`<div></div>\`, between 2 backticks.
 
 \`\`\`
@@ -39,9 +42,8 @@ And here. | Okay. | I think we get it.
 - That look like this.      
   1. And there are numbered lists too.
   1. Use just 1s if you want!
-  1. And last but not least, let's not forget embedded images:
-
-![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)`
+  1. Do you hear the people sing?
+`
     };
   }
 
@@ -50,51 +52,28 @@ And here. | Okay. | I think we get it.
   }
 
   render() {
-    const containerStyle = {
-      height: "90vh",
-      width: "90%",
-      margin: "2% auto"
-    }
-    const editorStyle = {
-      backgroundColor: "#eee",
-      border: "0",
-      height: "80vh",
-      padding: "15px",
-      width: "100%"
-    };
-    const previewStyle = Object.assign(
-      {},
-      editorStyle,
-      { textAlign: "left" });
-
     return (
-      <div style={containerStyle}>
-        <div className="row text-center">
-          <h1>Markdown Previewer</h1>
-        </div>
-        <div className="row justify-content-center">
-          <div className="col-4 text-center">
-            {/*---------- Editor -----------*/}
-            <h4><badge>Editor</badge></h4>
-            <div className="mark-input">
+      <div className="container-fluid">
+        <div className="row-container row align-items-center justify-content-center">
+          <div className="row w-75 mark-input">
+            <div className="col-md-6">
+              <h1 className="title">Markdown</h1><div className="line"></div>
               <textarea id="editor"
                 className="input"
-                style={editorStyle}
                 value={this.state.markdown}
                 onChange={(e) => {
                   this.updateMarkdown(e.target.value)
                 }}></textarea>
             </div>
-          </div>
-          <div className="col-4 text-center">
-            {/*---------- Preview -----------*/}
-            <h4><badge>Preview</badge></h4>
-            <div id="preview"
-              className="overflow-auto"
-              style={previewStyle}
-              dangerouslySetInnerHTML={{
-                __html: marked(this.state.markdown, { breaks: true, gfm: true })
-              }}></div>
+            <div className="col-md-6">
+              <h1 className="title">Preview</h1><div className="line"></div>
+              <div id="preview"
+                className="overflow-auto"
+                dangerouslySetInnerHTML={{
+                  __html: marked(this.state.markdown, { breaks: true, gfm: true })
+                }}>
+              </div>
+            </div>
           </div>
         </div>
       </div>
